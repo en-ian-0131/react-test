@@ -1,0 +1,118 @@
+//變數
+$color:green;
+$pColor:purple;
+$thirdColor:blue;
+$fourColor:orange;
+$fontSize:10px;
+
+//繼承
+%fontStyle{
+    font-weight: 700;
+    color: $fourColor;
+    font-size: 30px;
+}
+
+//Function
+@function forTableTh($basic){
+    @if($basic == 1){
+        @return $color;
+    }
+    @if($basic == 2){
+        @return $pColor;
+    }
+    @if($basic ==3){
+        @return $thirdColor;
+    }
+}
+@function forTableTd($basic){
+        @return $fontSize*$basic*3;
+}
+
+//mixin
+@mixin fontAndColor($basic){
+    color:forTableTh($basic);
+    font-size: forTableTd($basic);
+    font-weight: 500;
+
+}
+
+
+.App{
+    font-size: 50px;
+}
+
+main{
+    > ul{
+        >li{
+            color: $color;
+        }
+    }
+    > p{
+        @extend %fontStyle
+    }
+    > div{
+        >table{
+            >thead{
+                >tr{
+                    >th{
+                        &:nth-child(1){
+                            color: forTableTh(3);
+                        }
+                        &:nth-child(2){
+                            color: forTableTh(2);
+                        }
+                        &:nth-child(3){
+                            color: forTableTh(1);
+                        }
+                    }
+                }
+            }
+            >tbody{
+                >tr{
+                    >td{
+                        &:nth-child(1){
+                        //    font-size:forTableTd(1) ; 
+                           @include fontAndColor(1)
+                        }
+                        &:nth-child(2){
+                            // font-size: forTableTd(2);
+                            @include fontAndColor(2)
+                         }
+                         &:nth-child(3){
+                            // font-size:forTableTd(3) ;
+                            @include fontAndColor(3) 
+                         }
+                    }
+                }
+            }
+        }
+    }
+}
+footer{
+    p{
+        color: blue;
+        font: {
+            size: 50px;
+            weight: 700;
+            family: "Courier New", Courier, monospace;
+          }
+        &::before{
+            content: '0.1 0.2 0.3 before ';
+            color:$pColor;
+        }
+        &::after{
+            content:' after 4 5 6';
+            color:$color;
+        }
+    }
+    span{
+        // color: green;
+        // font-size: 30px;
+        // font-weight: 500;
+        @extend %fontStyle;
+        &:hover{
+            color: $color;
+            text-decoration: line-through;
+        }
+    }
+}

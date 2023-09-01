@@ -1,0 +1,74 @@
+body {
+  background-color: rgb(66, 66, 66);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header > .navHeader {
+  justify-content: center;
+}
+.header > .navHeader > a > .home {
+  color: white;
+  font-size: 40px;
+  font-weight: 500;
+  margin-right: 10px;
+  background-color: transparent;
+  border: none;
+}
+.header > .navHeader > .separate {
+  color: white;
+  font-size: 40px;
+  font-weight: 500;
+  margin-right: 10px;
+}
+.header > .navHeader > a > .products {
+  color: white;
+  font-size: 40px;
+  font-weight: 500;
+  background-color: transparent;
+  border: none;
+}
+.header > .navHeader > a > .search {
+  color: white;
+  font-size: 40px;
+  font-weight: 500;
+  background-color: transparent;
+  border: none;
+}
+.header > .h1Home {
+  color: white;
+}
+.header > .h1Products {
+  color: white;
+}
+.header > .products {
+  color: white;
+  font-size: 25px;
+}
+.header > .product {
+  color: white;
+  font-size: 25px;
+}
+.header > .features {
+  color: white;
+  font-size: 25px;
+}
+.header > form > .search {
+  color: white;
+  font-size: 25px;
+}
+.header > form > .searchInput {
+  padding: 5px 10px;
+  border-radius: 7px;
+}
+.header > .KeyWord {
+  color: white;
+  font-size: 25px;
+}
+
+.active {
+  background-color: red;
+}/*# sourceMappingURL=Router.css.map */

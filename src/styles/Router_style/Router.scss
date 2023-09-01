@@ -1,0 +1,75 @@
+body {
+  background-color: rgb(66, 66, 66);
+}
+
+.header {
+  //   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  //   justify-content: center;
+  align-items: center;
+  > .navHeader {
+    justify-content: center;
+    > a > .home {
+      color: white;
+      font-size: 40px;
+      font-weight: 500;
+      margin-right: 10px;
+      background-color: transparent;
+      border: none;
+    }
+    > .separate {
+      color: white;
+      font-size: 40px;
+      font-weight: 500;
+      margin-right: 10px;
+    }
+    > a > .products {
+      color: white;
+      font-size: 40px;
+      font-weight: 500;
+      background-color: transparent;
+      border: none;
+    }
+    > a > .search {
+      color: white;
+      font-size: 40px;
+      font-weight: 500;
+      background-color: transparent;
+      border: none;
+    }
+  }
+  > .h1Home {
+    color: white;
+  }
+  > .h1Products {
+    color: white;
+  }
+  > .products {
+    color: white;
+    font-size: 25px;
+  }
+  > .product {
+    color: white;
+    font-size: 25px;
+  }
+  > .features {
+    color: white;
+    font-size: 25px;
+  }
+  > form > .search {
+    color: white;
+    font-size: 25px;
+  }
+  > form > .searchInput {
+    padding: 5px 10px;
+    border-radius: 7px;
+  }
+  > .KeyWord {
+    color: white;
+    font-size: 25px;
+  }
+}
+.active {
+  background-color: red;
+}
